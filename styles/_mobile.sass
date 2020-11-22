@@ -1,6 +1,6 @@
 
 // Medium devices (tablets, 768px and up)
-@media (max-width: 768px) 
+@media only screen and (max-width: 768px) 
   html, body
     background: $mobile--orange-brown
 
@@ -11,12 +11,9 @@
     left: 8px
 
   .nav--arrows
+    position: absolute
     left: 50%
     transform: translateX(-50%)
-
-  .bg
-    height: 66%
-    width: 80%
 
   #nav--arrows--next
     bottom: 25px
@@ -24,6 +21,42 @@
   #nav--arrows--previous
     top: 25px
 
-@media (min-width: 769)
+  .bg
+    height: 66%
+    width: 80%
+
+  #title
+    font-size: 15vw
+    top: 68%
+    left: 3%
+
+@media only screen and (min-width: 769px)
+  .nav--circle--collection
+    flex-direction: row
+    align-items: center
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 25px
+  
+  #nav--a--active
+    transform: rotate(90deg)
+
   .nav--arrows
     top: 50%
+    transform: scale(1.3)
+
+  #nav--arrows--next
+    right: 25px
+    transform: rotate(-90deg)
+    
+  #nav--arrows--previous
+    left: 25px
+    transform: rotate(-90deg)
+
+  .bg
+    width: 70%
+    height: 85%
+
+  #title
+    font-size: 10vw
+    left: 10%

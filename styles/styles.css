@@ -18,10 +18,6 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   gap: 20px;
 }
 
@@ -30,18 +26,8 @@ html, body {
   position: absolute;
 }
 
-#nav--arrows--next {
-  right: 25px;
-}
-
-#nav--arrows--previous {
-  left: 25px;
-}
-
 .bg {
   position: absolute;
-  height: 66%;
-  width: 80%;
   background: url("/assets/homeShoes.jpg");
   background-size: cover;
   border-radius: 10px;
@@ -54,16 +40,13 @@ html, body {
 #title {
   position: absolute;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  top: 68%;
-  left: 3%;
-  font-size: 15vw;
   background: -webkit-gradient(linear, left top, right top, color-stop(38.82%, #DC4066), color-stop(89.78%, #95515C));
   background: linear-gradient(90deg, #DC4066 38.82%, #95515C 89.78%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   html, body {
     background: -webkit-gradient(linear, left bottom, left top, from(#C76801), to(#FF7A00));
     background: linear-gradient(0deg, #C76801 0%, #FF7A00 100%);
@@ -79,13 +62,10 @@ html, body {
     left: 8px;
   }
   .nav--arrows {
+    position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-  }
-  .bg {
-    height: 66%;
-    width: 80%;
   }
   #nav--arrows--next {
     bottom: 25px;
@@ -93,11 +73,57 @@ html, body {
   #nav--arrows--previous {
     top: 25px;
   }
+  .bg {
+    height: 66%;
+    width: 80%;
+  }
+  #title {
+    font-size: 15vw;
+    top: 68%;
+    left: 3%;
+  }
 }
 
-@media (min-width: 769) {
+@media only screen and (min-width: 769px) {
+  .nav--circle--collection {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 25px;
+  }
+  #nav--a--active {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
   .nav--arrows {
     top: 50%;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  #nav--arrows--next {
+    right: 25px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  #nav--arrows--previous {
+    left: 25px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .bg {
+    width: 70%;
+    height: 85%;
+  }
+  #title {
+    font-size: 10vw;
+    left: 10%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
