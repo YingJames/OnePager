@@ -36,7 +36,7 @@ html, body {
 
 .bg {
   position: absolute;
-  background-image: url("homeShoes.jpg");
+  background-image: url("https://res.cloudinary.com/yingcloud/image/upload/v1606077836/OnePager/homeShoe.jpg");
   background-size: cover;
   border-radius: 10px;
   top: 50%;
