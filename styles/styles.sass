@@ -1,5 +1,4 @@
 @import variables
-@import mobile
 *
   box-sizing: border-box
   margin: 0
@@ -8,28 +7,25 @@
 html, body 
   width: 100%
   height: 100%
-  background: $mobile--orange-brown
+  background: $orange-brown
   
 
 .nav--circle--collection
+  z-index: 1
   position: fixed
-  top: 50%
-  transform: translateY(-50%)
-  left: 8px
   display: flex
-  flex-direction: column
+  flex-direction: row
   gap: 20px
 
 .nav--arrows
+  z-index: 1
   position: absolute
-  left: 50%
-  transform: translateX(-50%)
 
 #nav--arrows--next
-  bottom: 25px
+  right: 25px
 
 #nav--arrows--previous
-  top: 25px
+  left: 25px
 
 .bg
   position: absolute
@@ -51,3 +47,5 @@ html, body
   background: $burgundy-purple
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
+
+@import mobile
