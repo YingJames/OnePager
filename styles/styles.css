@@ -1,3 +1,27 @@
+@media (min-width: 768px) {
+  .nav--circle--collection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav--arrows {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .bg {
+    height: 66%;
+    width: 80%;
+  }
+  #nav--arrows--next {
+    bottom: 25px;
+  }
+  #nav--arrows--previous {
+    top: 25px;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
