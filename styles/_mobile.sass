@@ -1,8 +1,14 @@
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) 
+@media (max-width: 768px) 
+  html, body
+    background: $mobile--orange-brown
+
   .nav--circle--collection
     flex-direction: column
+    transform: translateY(-50%)
+    top: 50%
+    left: 8px
 
   .nav--arrows
     left: 50%
@@ -17,3 +23,7 @@
 
   #nav--arrows--previous
     top: 25px
+
+@media (min-width: 769)
+  .nav--arrows
+    top: 50%
