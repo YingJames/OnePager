@@ -3,7 +3,7 @@
     "mappings": "",
     "sources": [
         "styles.sass",
-        "_assets.scss"
+        "_variables.scss"
     ],
     "names": [],
     "file": "styles.css"
