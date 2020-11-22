@@ -14,7 +14,9 @@ html, body {
 
 .nav--circle--collection {
   position: fixed;
-  top: 40%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,5 +41,30 @@ html, body {
 
 #nav--arrows--previous {
   top: 25px;
+}
+
+.bg {
+  position: absolute;
+  height: 66%;
+  width: 80%;
+  background: url("/assets/homeShoes.jpg");
+  background-size: cover;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#title {
+  position: absolute;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  top: 68%;
+  left: 3%;
+  font-size: 15vw;
+  background: -webkit-gradient(linear, left top, right top, color-stop(38.82%, #DC4066), color-stop(89.78%, #95515C));
+  background: linear-gradient(90deg, #DC4066 38.82%, #95515C 89.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /*# sourceMappingURL=styles.css.map */
