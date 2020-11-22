@@ -4,7 +4,7 @@
     "sources": [
         "styles.sass",
         "_variables.scss",
-        "_mobile.sass"
+        "_media.sass"
     ],
     "names": [],
     "file": "styles.css"
