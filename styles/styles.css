@@ -39,6 +39,7 @@ html, body {
 
 #title {
   position: absolute;
+  top: 68%;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   background: -webkit-gradient(linear, left top, right top, color-stop(38.82%, #DC4066), color-stop(89.78%, #95515C));
   background: linear-gradient(90deg, #DC4066 38.82%, #95515C 89.78%);
@@ -79,7 +80,6 @@ html, body {
   }
   #title {
     font-size: 15vw;
-    top: 68%;
     left: 3%;
   }
 }
