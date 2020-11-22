@@ -13,7 +13,7 @@ html, body {
 }
 
 .nav--circle--collection {
-  position: absolute;
+  position: fixed;
   top: 40%;
   left: 8px;
   display: -webkit-box;
@@ -24,5 +24,20 @@ html, body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
+}
+
+.nav--arrows {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#nav--arrows--next {
+  bottom: 25px;
+}
+
+#nav--arrows--previous {
+  top: 25px;
 }
 /*# sourceMappingURL=styles.css.map */
