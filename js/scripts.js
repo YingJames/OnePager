@@ -37,15 +37,14 @@ function onHover(element) {
         ease: "elastic.out",
         scale: 1.3,
       });
-    }
+    };
     dotObject.onmouseout = function () {
       gsap.to(dotObject, {
         ease: "elastic.out",
         scale: 1.0,
       });
-    }
+    };
   }
-
 }
 onHover(".nav--arrows");
 onHover(".nav--circle--inactive");
