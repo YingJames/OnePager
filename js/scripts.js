@@ -56,5 +56,9 @@ function onHover(element) {
   }
 
 }
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene, {
+  relativeInput: true
+});
 onHover(".nav--arrows");
 onHover(".nav--circle--inactive");
