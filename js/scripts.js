@@ -29,6 +29,7 @@ window.onload = function animateReload() {
     "(min-width: 769px)": function () {
       animateHero("70%");
         gsap.set(".nav--arrows", {
+          translateY: "-50%",
           translateX: "0%",
           rotate: -90
         });
