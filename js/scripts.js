@@ -28,29 +28,24 @@ window.onload = function animateReload() {
   });
 };
 
-function onArrowHover(element) {
-  let navObject = document.getElementById(element);
-  navObject.onmouseover = function () 
-  {mouseOver(navObject)};
-  navObject.onmouseout = function () 
-  {mouseOut(navObject)};
-}
-function mouseOver(navObject) {
-  gsap.to(navObject, {
-    ease: "elastic.out",
-    scale: 1.5,
-  })
-}
-function mouseOut(navObject) {
-  gsap.to(navObject, {
-    ease: "elastic.out",
-    scale: 1.0,
-  })
-}
-
-function onDotHover() {
-  let inactiveDot = document.querySelectorAll(".nav--circle--inactive");
+function onHover(element) {
+  let inactiveDot = document.querySelectorAll(element);
+  for (let i = 0; i < inactiveDot.length; i++) {
+    let dotObject = inactiveDot[i];
+    dotObject.onmouseover = function () {
+      gsap.to(dotObject, {
+        ease: "elastic.out",
+        scale: 1.3,
+      });
+    }
+    dotObject.onmouseout = function () {
+      gsap.to(dotObject, {
+        ease: "elastic.out",
+        scale: 1.0,
+      });
+    }
+  }
 
 }
-onArrowHover("nav--arrows--previous");
-onArrowHover("nav--arrows--next");
+onHover(".nav--arrows");
+onHover(".nav--circle--inactive");
