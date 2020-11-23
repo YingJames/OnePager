@@ -77,8 +77,6 @@ html, body {
   .nav--arrows {
     position: absolute;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
   #nav--arrows--next {
     bottom: 25px;
@@ -106,8 +104,6 @@ html, body {
         -ms-flex-align: center;
             align-items: center;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
     bottom: 25px;
   }
   #nav--a--active {

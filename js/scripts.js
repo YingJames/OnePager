@@ -20,10 +20,18 @@ window.onload = function animateReload() {
   ScrollTrigger.matchMedia({
     "(max-width: 768px)": function () {
       animateHero("80%");
+      gsap.set(".nav--arrows", {
+        translateX: "-50%",
+        rotate: 0
+      });
     },
 
     "(min-width: 769px)": function () {
       animateHero("70%");
+        gsap.set(".nav--arrows", {
+          translateX: "0%",
+          rotate: -90
+        });
     },
   });
 };
@@ -37,14 +45,15 @@ function onHover(element) {
         ease: "elastic.out",
         scale: 1.3,
       });
-    };
+    }
     dotObject.onmouseout = function () {
       gsap.to(dotObject, {
         ease: "elastic.out",
         scale: 1.0,
       });
-    };
+    }
   }
+
 }
 onHover(".nav--arrows");
 onHover(".nav--circle--inactive");
