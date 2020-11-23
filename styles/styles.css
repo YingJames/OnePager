@@ -86,7 +86,7 @@ html, body {
     top: 25px;
   }
   .bg {
-    height: 66%;
+    height: 70%;
     width: 80%;
   }
   #title {
@@ -106,6 +106,8 @@ html, body {
             align-items: center;
     left: 50%;
     bottom: 25px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   #nav--a--active {
     -webkit-transform: rotate(90deg);
