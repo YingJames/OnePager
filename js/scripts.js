@@ -22,17 +22,17 @@ window.onload = function animateReload() {
       animateHero("80%");
       gsap.set(".nav--arrows", {
         translateX: "-50%",
-        rotate: 0
+        rotate: 0,
       });
     },
 
     "(min-width: 769px)": function () {
       animateHero("70%");
-        gsap.set(".nav--arrows", {
-          translateY: "-50%",
-          translateX: "0%",
-          rotate: -90
-        });
+      gsap.set(".nav--arrows", {
+        translateY: "-50%",
+        translateX: "0%",
+        rotate: -90,
+      });
     },
   });
 };
@@ -46,30 +46,32 @@ function onHover(element) {
         ease: "elastic.out",
         scale: 1.3,
       });
-    }
+    };
     dotObject.onmouseout = function () {
       gsap.to(dotObject, {
         ease: "elastic.out",
         scale: 1.0,
       });
-    }
+    };
   }
-
 }
-var scene = document.getElementById('scene');
+var scene = document.getElementById("scene");
 var parallaxInstance = new Parallax(scene, {
-  relativeInput: true
+  relativeInput: true,
 });
 
 DeviceOrientationEvent.requestPermission()
-.then(response => {
-  if (response == 'granted') {
-    window.addEventListener('deviceorientation', (e) => {
-      // do something with e
-    })
-  }
-})
+  .then((response) => {
+    if (response == "granted") {
+      window.addEventListener("deviceorientation", (e) => {
+        var scene = document.getElementById("scene");
+        var parallaxInstance = new Parallax(scene, {
+          relativeInput: true,
+        });
+      });
+    }
+  })
 
-.catch(console.error)
+  .catch(console.error);
 onHover(".nav--arrows");
 onHover(".nav--circle--inactive");
