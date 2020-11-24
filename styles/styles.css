@@ -51,8 +51,8 @@ html, body {
 .bg {
   background-image: url("https://res.cloudinary.com/yingcloud/image/upload/q_auto:low/v1606077836/OnePager/homeShoe.jpg");
   background-size: cover;
-  -webkit-box-shadow: 10px -2px 50px 2px rgba(0, 0, 0, 0.7);
-          box-shadow: 10px -2px 50px 2px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 36px -7px 50px -3px rgba(0, 0, 0, 0.4);
+          box-shadow: 36px -7px 50px -3px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 
