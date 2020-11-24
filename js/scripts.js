@@ -60,5 +60,16 @@ var scene = document.getElementById('scene');
 var parallaxInstance = new Parallax(scene, {
   relativeInput: true
 });
+
+DeviceOrientationEvent.requestPermission()
+.then(response => {
+  if (response == 'granted') {
+    window.addEventListener('deviceorientation', (e) => {
+      // do something with e
+    })
+  }
+})
+
+.catch(console.error)
 onHover(".nav--arrows");
 onHover(".nav--circle--inactive");
