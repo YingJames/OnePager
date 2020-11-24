@@ -55,23 +55,25 @@ function onHover(element) {
     };
   }
 }
-var scene = document.getElementById("scene");
-var parallaxInstance = new Parallax(scene, {
-  relativeInput: true,
-});
 
-DeviceOrientationEvent.requestPermission()
-  .then((response) => {
-    if (response == "granted") {
-      window.addEventListener("deviceorientation", (e) => {
-        var scene = document.getElementById("scene");
-        var parallaxInstance = new Parallax(scene, {
-          relativeInput: true,
-        });
-      });
-    }
-  })
 
-  .catch(console.error);
+function onClick() {
+  // feature detect
+  if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+    DeviceOrientationEvent.requestPermission()
+      .then(permissionState => {
+        if (permissionState === 'granted') {
+          window.addEventListener('deviceorientation', () => {});
+        }
+      })
+      .catch(console.error);
+  } else {
+      var scene = document.getElementById("scene");
+      var parallaxInstance = new Parallax(scene, {
+      relativeInput: true,
+    });
+  }
+}
+
 onHover(".nav--arrows");
 onHover(".nav--circle--inactive");
